@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <h1>
+            Welcome to angular classes {{ name | reverse }}
+           
+        </h1>
+        <img [@enlarge]="isenlarge?'end':'start'" src="assets/g-9.jpg" style="height:200px">
+        <button class="btn btn-info" (click)="triggeranimation()">{{buttontext}}</button>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+    
+      <ul class="nav nav-tabs">
+          <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <a routerLink="/">Home</a>
+          </li>
+         
+        <li role="presentation" routerLinkActive="active">
+            <a routerLink="reactiveform">Reactiveform</a>
+        </li>
+        <li role="presentation" routerLinkActive="active">
+            <a routerLink="templatedriven">templatedriven</a>
+        </li>
+        <li role="presentation" routerLinkActive="active">
+            <a routerLink="httprequest">httprequest</a>
+        </li>
+        <li role="presentation" routerLinkActive="active">
+            <a routerLink="serviceexample">serviceexample</a>
+        </li>
+          
+          
+      </ul>
+    </div>
+</div>
+<div>
+    <router-outlet>
+                
+    </router-outlet>
+</div>

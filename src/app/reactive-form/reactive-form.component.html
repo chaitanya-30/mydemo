@@ -1,0 +1,36 @@
+<h3 class="text-center text-success">Reactive form</h3>
+<div class="container">
+    <div class="row m-auto">
+        <div class="col-md-10 ">
+            <form [formGroup]="reactiveFormex" (ngSubmit)="onSubmit()">
+                <div class="form-group d-flex flex-column align-center">                    
+                <label>Project Name</label>
+                <input type="text" formControlName="projectName">
+                <!-- <span class="help-text" 
+                *ngIf="reactiveForm.get(projectName).valid && 
+                reactiveForm.get(projectName).touched">
+            please enter project name</span> -->
+               </div>
+               <div class="form-group">
+                <label> Mail</label>
+                <input type="text" name="email" formControlName="mail">
+                <!-- <span class="help-text" *ngIf="reactiveForm.get(mail).valid && 
+                    reactiveForm.get(mail).touched">
+                please enter mail</span> -->
+                             </div>
+               <div class="form-group">
+                <label>Project Status</label>
+                <select formControlName="projectStatus">
+                    <option>Stable</option>
+                    <option>Critical</option>
+                    <option>Finished</option>
+                </select>
+               </div>              
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>

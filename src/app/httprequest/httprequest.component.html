@@ -1,0 +1,12 @@
+<p>httprequest works!</p>
+
+<!-- <app-quizapp [heading]=name
+(change)="headingchangedinparent($event)" #quiz></app-quizapp> -->
+<h1 appBetterHighlight>{{ name }}</h1>
+<!-- <h2>{{ quiz.referencevariable}}</h2> -->
+<h3>{{ msgFromChild }}</h3>
+<p #para>this is paragraph one</p>
+<p #para>this is paragraph two</p>
+<h3 #heading>heading one</h3>
+<h3 appBetterHighlight>Heading two</h3>
+<button (click)="changeon()" class="btn btn-danger">click</button>
